@@ -18,7 +18,7 @@ concurrency:
 jobs:
   test:
     name: VDB Tests
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version:
