@@ -12,7 +12,7 @@ concurrency:
 jobs:
   python-style:
     name: Python Style
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code
@@ -51,7 +51,7 @@ jobs:
 
   web-style:
     name: Web Style
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     defaults:
       run:
         working-directory: ./web
@@ -85,7 +85,7 @@ jobs:
 
   superlinter:
     name: SuperLinter
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code

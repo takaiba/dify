@@ -20,7 +20,7 @@ env:
 
 jobs:
   build:
-    runs-on: ${{ matrix.platform == 'linux/arm64' && 'arm64_runner' || 'ubuntu-latest' }}
+    runs-on: ${{ matrix.platform == 'linux/arm64' && 'arm64_runner' || 'self-hosted' }}
     if: github.repository == 'langgenius/dify'
     strategy:
       matrix:
@@ -94,7 +94,7 @@ jobs:
 
   create-manifest:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     if: github.repository == 'langgenius/dify'
     strategy:
       matrix:
